@@ -1,0 +1,4 @@
+
+start_here/*
+!start_here/*.sv
+!start_here/README.md
