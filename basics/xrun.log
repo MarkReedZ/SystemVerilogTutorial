@@ -1,0 +1,36 @@
+xrun(64): 19.07-a001: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	19.07-a001: Started on Oct 30, 2021 at 19:15:22 EDT
+xrun
+	test.sv
+file: test.sv
+	module worklib.hello:sv
+		errors: 0, warnings: 0
+xmelab: *W,AMSNEWSFE: You have set the environment variable AMS_NEW_SFE. This is no longer needed as IUS 9.2 and above only works in new SFE mode.
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		hello
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.hello:sv <0x47b8cb53>
+			streams:   1, words:  3808
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		         Instances  Unique
+		Modules:         1       1
+		Registers:       2       2
+		Initial blocks:  1       1
+	Writing initial simulation snapshot: worklib.hello:sv
+xmsim: *W,AMSNEWSFE: You have set the environment variable AMS_NEW_SFE. This is no longer needed as IUS 9.2 and above only works in new SFE mode.
+Loading snapshot worklib.hello:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/xcelium/files/xmsimrc
+xcelium> run
+map[a] = 0
+map[b] = 1
+map[c] = 2
+xmsim: *W,RNQUIE: Simulation is complete.
+xcelium> exit
+TOOL:	xrun(64)	19.07-a001: Exiting on Oct 30, 2021 at 19:15:26 EDT  (total: 00:00:04)
