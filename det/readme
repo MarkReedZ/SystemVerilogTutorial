@@ -1,0 +1,3 @@
+
+xrun -uvm -input shm.tcl -seed 1 detector.sv top.sv
+

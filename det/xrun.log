@@ -1,0 +1,324 @@
+xrun: 19.07-a001: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun	19.07-a001: Started on Nov 02, 2021 at 13:40:44 EDT
+xrun
+	-uvm
+	-input shm.tcl
+	-seed 1
+	detector.sv
+	top.sv
+Loading snapshot worklib.tb:sv .................... Done
+xmsim: *W,XCLGNOPTM: The SystemVerilog constraint solver Xceligen options 'seed_only_rand and process_alternate_rng and ignore_worklib_name' are not specified and will default to 0. The recommended value for each of them is 1 which will become the default in a future release.
+SVSEED set from command line: 1
+xmsim: *W,RNDXCELON: Xceligen, the new SystemVerilog constraint solver is used. Disabling Xceligen and using the legacy constraint solver is possible with "xrun/xmsim -xceligen on=0 ...".
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/xcelium/files/xmsimrc
+xcelium> source /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+xcelium> 
+xcelium> database -open waves -shm
+Created SHM database waves
+xcelium> probe -create tb -depth all -all -memories -shm -database waves
+xmsim: *W,PRNTAL: Some objects excluded from probe (-access -R).
+Created probe 1
+xcelium> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (19.07-a001)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test base_test...
+UVM_INFO top.sv(164) @ 90: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 90: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 110: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 110: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 130: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 130: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 150: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 150: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 170: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 170: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 190: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 190: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 210: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 210: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 230: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 230: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 250: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 250: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 270: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 270: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 290: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 290: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 310: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1
+UVM_INFO top.sv(175) @ 310: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 330: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b11
+UVM_INFO top.sv(175) @ 330: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 350: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b111
+UVM_INFO top.sv(175) @ 350: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 370: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 370: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 390: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 390: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 410: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 410: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 430: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 430: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 450: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 450: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 470: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 470: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 490: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1010
+UVM_INFO top.sv(175) @ 490: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 510: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b101
+UVM_INFO top.sv(175) @ 510: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 530: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 530: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 550: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 550: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 570: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 570: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 590: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 590: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 610: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1010
+UVM_INFO top.sv(175) @ 610: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 630: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b101
+UVM_INFO top.sv(175) @ 630: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 650: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 650: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 670: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 670: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 690: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 690: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 710: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 710: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 730: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 730: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 750: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 750: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 770: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1100
+UVM_INFO top.sv(175) @ 770: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 790: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1001
+UVM_INFO top.sv(175) @ 790: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 810: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b10
+UVM_INFO top.sv(175) @ 810: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 830: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b100
+UVM_INFO top.sv(175) @ 830: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 850: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1001
+UVM_INFO top.sv(175) @ 850: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 870: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b11
+UVM_INFO top.sv(175) @ 870: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 890: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b111
+UVM_INFO top.sv(175) @ 890: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 910: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 910: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 930: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 930: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 950: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 950: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 970: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 970: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 990: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 990: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1010: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1010: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1030: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 1030: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1050: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1050: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1070: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1070: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1090: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1090: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1110: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1110: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1130: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 1130: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1150: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 1150: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1170: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1170: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1190: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 1190: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1210: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1210: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1230: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1230: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1250: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1250: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1270: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1270: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1290: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1290: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1310: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1310: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1330: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1330: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1350: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1350: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1370: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1370: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1390: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1390: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1410: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1410: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1430: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1430: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1450: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1450: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1470: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1470: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1490: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1490: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1510: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 1510: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1530: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 1530: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1550: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1550: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1570: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 1570: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1590: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1590: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1610: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1610: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1630: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1630: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1650: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1650: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1670: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 1670: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1690: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 1690: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1710: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1710: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1730: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 1730: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1750: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 1750: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1770: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 1770: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1790: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 1790: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1810: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1810: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1830: uvm_test_top.test_env.sb [SB] in=0 out=1 exp=0b1 act=0b110
+UVM_INFO top.sv(175) @ 1830: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1850: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 1850: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1870: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 1870: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 1890: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 1890: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1910: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 1910: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1930: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1100
+UVM_INFO top.sv(175) @ 1930: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1950: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1001
+UVM_INFO top.sv(175) @ 1950: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1970: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b11
+UVM_INFO top.sv(175) @ 1970: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 1990: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b111
+UVM_INFO top.sv(175) @ 1990: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2010: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2010: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2030: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2030: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2050: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2050: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2070: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2070: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2090: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2090: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2110: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1111
+UVM_INFO top.sv(175) @ 2110: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2130: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 2130: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2150: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1100
+UVM_INFO top.sv(175) @ 2150: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2170: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1001
+UVM_INFO top.sv(175) @ 2170: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2190: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b11
+UVM_INFO top.sv(175) @ 2190: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2210: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b111
+UVM_INFO top.sv(175) @ 2210: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2230: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 2230: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2250: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 2250: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2270: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 2270: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 2290: uvm_test_top.test_env.sb [SB] in=0 out=1 exp=0b1 act=0b110
+UVM_INFO top.sv(175) @ 2290: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2310: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 2310: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2330: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 2330: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 2350: uvm_test_top.test_env.sb [SB] in=0 out=1 exp=0b1 act=0b110
+UVM_INFO top.sv(175) @ 2350: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2370: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1101
+UVM_INFO top.sv(175) @ 2370: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2390: uvm_test_top.test_env.sb [SB] in=1 out=0 exp=0b0 act=0b1011
+UVM_INFO top.sv(172) @ 2390: uvm_test_top.test_env.sb [SB] Pattern found so expect 1
+UVM_INFO top.sv(164) @ 2410: uvm_test_top.test_env.sb [SB] in=1 out=1 exp=0b1 act=0b111
+UVM_INFO top.sv(175) @ 2410: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(71) @ 2410: uvm_test_top.test_env.ag.seq@@seq [SEQ] Done
+UVM_INFO top.sv(164) @ 2430: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1110
+UVM_INFO top.sv(175) @ 2430: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2450: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1100
+UVM_INFO top.sv(175) @ 2450: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2470: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b1000
+UVM_INFO top.sv(175) @ 2470: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2490: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2490: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2510: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2510: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2530: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2530: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2550: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2550: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2570: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2570: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO top.sv(164) @ 2590: uvm_test_top.test_env.sb [SB] in=0 out=0 exp=0b0 act=0b0
+UVM_INFO top.sv(175) @ 2590: uvm_test_top.test_env.sb [SB] Pattern not found so expect 0
+UVM_INFO /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 2610: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  255
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[SB]   252
+[SEQ]     1
+[TEST_DONE]     1
+Simulation complete via $finish(1) at time 2610 NS + 45
+/afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+xcelium> exit
+TOOL:	xrun	19.07-a001: Exiting on Nov 02, 2021 at 13:41:08 EDT  (total: 00:00:24)
