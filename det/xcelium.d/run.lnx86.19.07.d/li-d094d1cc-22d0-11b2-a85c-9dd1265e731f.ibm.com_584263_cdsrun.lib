@@ -1,2 +1,0 @@
-SOFTINCLUDE /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/inca/files/cds.lib
-define worklib ../worklib
