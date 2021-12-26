@@ -1,0 +1,4 @@
+
+git filter-branch --prune-empty -d /dev/shm/scratch \
+  --index-filter "git rm --cached -rf --ignore-unmatch mc/xcelium.d/worklib/xm.lnx86.068.pak" \
+  --tag-name-filter cat -- --all

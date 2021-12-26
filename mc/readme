@@ -1,0 +1,7 @@
+
+  xrun top.sv mmio.sv wdf.sv
+
+xrun -uvm -input shm.tcl -seed 1 detector.sv top.sv
+
+xrun -uvm -input shm.tcl -seed 1 tb.sv top.sv mmio.sv wdf.sv tl.sv
+

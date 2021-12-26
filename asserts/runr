@@ -1,0 +1,3 @@
+
+xrun +access+r -input shm.tcl -seed 1 -coverage u -covoverwrite ${1}.sv
+

@@ -1,0 +1,76 @@
+xrun: 19.07-a001: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun	19.07-a001: Started on Nov 28, 2021 at 19:45:43 EST
+xrun
+	pat.sv
+Recompiling... reason: file './pat.sv' is newer than expected.
+	expected: Sun Nov 28 19:45:12 2021
+	actual:   Sun Nov 28 19:45:41 2021
+file: pat.sv
+	module worklib.tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.tb:sv <0x670ba614>
+			streams:  14, words: 11611
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		         Instances  Unique
+		Modules:         1       1
+		Registers:       9       9
+		Always blocks:   4       4
+		Initial blocks:  2       2
+		Assertions:      1       1
+	Writing initial simulation snapshot: worklib.tb:sv
+Loading snapshot worklib.tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/xcelium/files/xmsimrc
+xcelium> run
+  0: start=0 a=0 end=0
+ 15: start=1 a=0 end=0
+ 25: start=0 a=1 end=0
+ 45: start=0 a=0 end=0
+ 65: start=0 a=1 end=0
+ 85: start=0 a=0 end=0
+105: start=0 a=1 end=0
+125: start=0 a=0 end=0
+145: start=0 a=1 end=0
+165: start=0 a=0 end=0
+185: start=0 a=1 end=0
+205: start=0 a=0 end=0
+225: start=0 a=1 end=0
+245: start=0 a=0 end=0
+265: start=0 a=1 end=0
+285: start=0 a=0 end=0
+305: start=0 a=1 end=0
+325: start=0 a=0 end=0
+345: start=0 a=1 end=0
+365: start=0 a=0 end=0
+385: start=0 a=1 end=0
+405: start=0 a=0 end=0
+425: start=0 a=1 end=0
+445: start=0 a=0 end=0
+465: start=0 a=1 end=0
+485: start=0 a=0 end=0
+505: start=0 a=1 end=0
+525: start=0 a=0 end=0
+545: start=0 a=1 end=0
+565: start=0 a=0 end=0
+585: start=0 a=1 end=0
+605: start=0 a=0 end=0
+625: start=0 a=1 end=0
+645: start=0 a=0 end=0
+665: start=0 a=1 end=0
+685: start=0 a=0 end=0
+705: start=0 a=1 end=0
+725: start=0 a=0 end=0
+745: start=0 a=0 end=1
+Simulation complete via $finish(1) at time 765 NS + 0
+./pat.sv:44     $finish;
+xcelium> exit
+TOOL:	xrun	19.07-a001: Exiting on Nov 28, 2021 at 19:45:55 EST  (total: 00:00:12)

@@ -1,0 +1,77 @@
+xrun: 19.07-a001: (c) Copyright 1995-2019 Cadence Design Systems, Inc.
+TOOL:	xrun	19.07-a001: Started on Nov 08, 2021 at 10:26:04 EST
+xrun
+	mem.sv
+Recompiling... reason: file './mem.sv' is newer than expected.
+	expected: Mon Nov  8 10:17:23 2021
+	actual:   Mon Nov  8 10:26:01 2021
+file: mem.sv
+	module worklib.MEM:sv
+		errors: 0, warnings: 0
+	module worklib.tb:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		tb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.MEM:sv <0x1699157c>
+			streams:   2, words:   562
+		worklib.tb:sv <0x0986fa48>
+			streams:  13, words:  8548
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             2       2
+		Registers:           7       7
+		Scalar wires:        3       -
+		Vectored wires:      3       -
+		Always blocks:       2       2
+		Initial blocks:      1       1
+		Cont. assignments:   1       1
+		Pseudo assignments:  5       5
+	Writing initial simulation snapshot: worklib.tb:sv
+Loading snapshot worklib.tb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /afs/apd/func/vlsi/cte/tools/cds/Xcelium/19.07.001/tools/xcelium/files/xmsimrc
+xcelium> run
+                  20 a= 0 wdata=0000 rdata=zzzz wr=0 rd=0
+                  25 a= 0 wdata=3524 rdata=zzzz wr=1 rd=0
+                  35 a= 1 wdata=5e81 rdata=zzzz wr=1 rd=0
+                  45 a= 2 wdata=d609 rdata=zzzz wr=1 rd=0
+                  55 a= 3 wdata=5663 rdata=zzzz wr=1 rd=0
+                  65 a= 4 wdata=7b0d rdata=zzzz wr=1 rd=0
+                  75 a= 5 wdata=998d rdata=zzzz wr=1 rd=0
+                  85 a= 6 wdata=8465 rdata=zzzz wr=1 rd=0
+                  95 a= 7 wdata=5212 rdata=zzzz wr=1 rd=0
+                 105 a= 8 wdata=e301 rdata=zzzz wr=1 rd=0
+                 115 a= 9 wdata=cd0d rdata=zzzz wr=1 rd=0
+                 125 a=10 wdata=f176 rdata=zzzz wr=1 rd=0
+                 135 a=11 wdata=cd3d rdata=zzzz wr=1 rd=0
+                 145 a=12 wdata=57ed rdata=zzzz wr=1 rd=0
+                 155 a=13 wdata=f78c rdata=zzzz wr=1 rd=0
+                 165 a=14 wdata=e9f9 rdata=zzzz wr=1 rd=0
+                 175 a=15 wdata=24c6 rdata=zzzz wr=1 rd=0
+                 185 a= 0 wdata=24c6 rdata=3524 wr=0 rd=1
+                 195 a= 1 wdata=24c6 rdata=5e81 wr=0 rd=1
+                 205 a= 2 wdata=24c6 rdata=d609 wr=0 rd=1
+                 215 a= 3 wdata=24c6 rdata=5663 wr=0 rd=1
+                 225 a= 4 wdata=24c6 rdata=7b0d wr=0 rd=1
+                 235 a= 5 wdata=24c6 rdata=998d wr=0 rd=1
+                 245 a= 6 wdata=24c6 rdata=8465 wr=0 rd=1
+                 255 a= 7 wdata=24c6 rdata=5212 wr=0 rd=1
+                 265 a= 8 wdata=24c6 rdata=e301 wr=0 rd=1
+                 275 a= 9 wdata=24c6 rdata=cd0d wr=0 rd=1
+                 285 a=10 wdata=24c6 rdata=f176 wr=0 rd=1
+                 295 a=11 wdata=24c6 rdata=cd3d wr=0 rd=1
+                 305 a=12 wdata=24c6 rdata=57ed wr=0 rd=1
+                 315 a=13 wdata=24c6 rdata=f78c wr=0 rd=1
+                 325 a=14 wdata=24c6 rdata=e9f9 wr=0 rd=1
+                 335 a=15 wdata=24c6 rdata=24c6 wr=0 rd=1
+Simulation complete via $finish(1) at time 435 NS + 0
+./mem.sv:47     #100 $finish;    
+xcelium> exit
+TOOL:	xrun	19.07-a001: Exiting on Nov 08, 2021 at 10:26:22 EST  (total: 00:00:18)
