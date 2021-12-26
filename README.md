@@ -1,8 +1,7 @@
 # SystemVerilogTutorial
-Hello world tutorial for SystemVerilog
 
 
-
+```
 module FIFO (input clk,rstn, wr, rd,
              input [7:0] din,
              output [7:0] dout,
@@ -40,3 +39,4 @@ module FIFO (input clk,rstn, wr, rd,
   assign empty = count==0;
   
 endmodule
+```
