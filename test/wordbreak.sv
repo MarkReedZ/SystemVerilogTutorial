@@ -19,7 +19,7 @@ class Trie;
     node n = root;
     node t;
     int l = s.len()-1;
-    $display("l=%d",l);
+    //$display("l=%d",l);
     foreach(s[i]) begin
       if ( !n.c.exists(s[i]) ) begin
         t = new();
@@ -28,7 +28,7 @@ class Trie;
       end else begin
         if ( i == l ) n.c[s[i]].isWord = 1;
       end
-      $display(" s=%s i %d isWord %d", s.substr(0,i), i, n.c[s[i]].isWord );
+      $display(" i %0d wd? %0d s=%s", i, n.c[s[i]].isWord, s.substr(0,i) );
       n = n.c[s[i]];
     end
   endfunction
@@ -43,7 +43,7 @@ class Trie;
       if ( n.c[s[i]] == null ) 
         return 0;
       n = n.c[s[i]];
-      $display(" s=%s char %s isWord %d %p", s.substr(0,i), s[i], n.isWord, n.c );
+      //$display(" s=%s char %s isWord %0d %p", s.substr(0,i), s[i], n.isWord, n.c );
       if ( n.isWord ) 
         if ( search( s.substr(i+1,s.len()-1) ) ) begin cache[s] = 1; return 1; end
     end 

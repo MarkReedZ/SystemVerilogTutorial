@@ -403,37 +403,33 @@ class driver extends uvm_driver #(Item);
 
 endclass
 
+
+
 class WdfSb extends uvm_scoreboard;
   `uvm_component_utils(WdfSb)
   function new(string name="WdfSb", uvm_component parent=null);
     super.new(name,parent);
   endfunction
 
-  uvm_analysis_export #(TlWdfItem) export_tl_wdf;
-  uvm_tlm_analysis_fifo #(TlWdfItem) tl_wdf_fifo;
+  `uvm_analysis_imp_decl(_tl_wdf)
+  uvm_analysis_imp_tl_wdf #(TlWdfItem, WdfSb) imp_tl_wdf;
+
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    export_tl_wdf = new("export_tl_wdf",this);
-    tl_wdf_fifo   = new("tl_wdf_fifo",this);
+    imp_tl_wdf = new("imp_tl_wdf",this);
   endfunction
 
   virtual function void connect_phase(uvm_phase phase);
-    export_tl_wdf.connect(tl_wdf_fifo.analysis_export);
+    super.connect_phase(phase);
   endfunction
 
-  task run();
-    TlWdfItem it;
-    forever begin
-      tl_wdf_fifo.get(it);
-      $display(" WdfSb: tl_wdf %s",it.str());
-      //if ( writeQ.size() == 0 ) begin
-        //`uvm_error("SB", "Saw tl_wdf with no matching dl_tl write")
-        //return;
-      //end
-      //dlxac = writeQ.pop_front();
-    end
-  endtask
+  //function void write_dl_tl( Item it );
+    //$display(" WdfSb: dl_tl %s",it.str());
+  //endfunction
+  function void write_tl_wdf( TlWdfItem it );
+    $display(" WdfSb: tl_wdf %s",it.str());
+  endfunction
 
   virtual function void check_phase(uvm_phase phase);
     //if ( writeQ.size() ) 
@@ -450,42 +446,39 @@ class TlSb extends uvm_scoreboard;
 
   Item writeQ[$];
 
-  uvm_analysis_export #(TlWdfItem) export_tl_wdf;
-  uvm_tlm_analysis_fifo #(TlWdfItem) tl_wdf_fifo;
+  `uvm_analysis_imp_decl(_dl_tl)
+  `uvm_analysis_imp_decl(_tl_wdf)
+  uvm_analysis_imp_dl_tl  #(Item, TlSb) imp_dl_tl;
+  uvm_analysis_imp_tl_wdf #(TlWdfItem, TlSb) imp_tl_wdf;
 
-  uvm_analysis_imp #(Item, TlSb) imp;
 
   virtual function void build_phase(uvm_phase phase);
     super.build_phase(phase);
-    imp = new("imp",this);
-    export_tl_wdf = new("export_tl_wdf",this);
-    tl_wdf_fifo      = new("tl_wdf_fifo",this);
+    imp_dl_tl  = new("imp_dl_tl",this);
+    imp_tl_wdf = new("imp_tl_wdf",this);
     //if (!uvm_config_db#(bit[3:0])::get(this, "*", "ref_pattern", pattern))
       //`uvm_fatal("SB", "No ref_pattern")
   endfunction
 
   virtual function void connect_phase(uvm_phase phase);
-    export_tl_wdf.connect(tl_wdf_fifo.analysis_export);
+    super.connect_phase(phase);
   endfunction
 
-  virtual function write(Item it);
+  virtual function write_dl_tl(Item it);
     //$display("    SB: dl_tl  %s",it.str());
     if ( it.cmd == 1 ) writeQ.push_back(it);
   endfunction
 
-  task run();
-    TlWdfItem it;
+  function void write_tl_wdf( TlWdfItem it );
     Item dlxac;
-    forever begin
-      tl_wdf_fifo.get(it);
-      $display("    SB: tl_wdf %s",it.str());
-      if ( writeQ.size() == 0 ) begin
+    $display(" TlSb: tl_wdf %s",it.str());
+    if ( writeQ.size() == 0 ) begin
         `uvm_error("SB", "Saw tl_wdf with no matching dl_tl write")
         return;
-      end
-      dlxac = writeQ.pop_front();
     end
-  endtask
+    dlxac = writeQ.pop_front();
+
+  endfunction
 
   virtual function void check_phase(uvm_phase phase);
     if ( writeQ.size() ) 
@@ -558,9 +551,9 @@ class env extends uvm_env;
 
   virtual function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
-    ag.mon.dl_ap.connect(tl_sb.imp);
-    tl_wdf_mon.tl_wdf_ap.connect(tl_sb.export_tl_wdf);
-    tl_wdf_mon.tl_wdf_ap.connect(wdf_sb.export_tl_wdf);
+    ag.mon.dl_ap.connect(tl_sb.imp_dl_tl);
+    tl_wdf_mon.tl_wdf_ap.connect(tl_sb.imp_tl_wdf);
+    tl_wdf_mon.tl_wdf_ap.connect(wdf_sb.imp_tl_wdf);
   endfunction
 
   virtual function void final_phase(uvm_phase phase);

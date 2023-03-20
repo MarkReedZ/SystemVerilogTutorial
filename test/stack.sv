@@ -27,3 +27,13 @@ module test;
     stk.print();
   end
 endmodule
+
+class fart #(type T=int);
+  T q[$];
+  task push( T a );
+    q.push_front(a);
+  endtask
+  task pop( ref T a );
+    a = q.pop_front();
+  endtask
+endclass

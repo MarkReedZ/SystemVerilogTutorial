@@ -38,6 +38,9 @@ module WDF ( input clk,rstn,
     if ( wdelay[3] ) begin
       $display("%0t: wdf_dfi_data=%0x",$time,wdf_dfi_data);
     end
+    if ( wdf_dfi_data != 0 ) begin
+      $display("%0t: wdf_dfi_data=%0x",$time,wdf_dfi_data);
+    end
 
   end
 
@@ -52,7 +55,7 @@ module WDF ( input clk,rstn,
     mmio_wdelay[ 11:8 ] = {1'b1, mmio_wdf_rptr};
   end
 
-  //assign fir = tlxr_wdf_perr | srq_wdf_perr;
+  assign fir = tlxr_wdf_perr | srq_wdf_perr;
   assign wdf_dfi_data = wdelay[3] ? wbuf[wdelay[2:0]] : '0;
   assign wdf_mmio_data = mmio_wdelay[3] ? wbuf[mmio_wdelay[2:0]] : 0;
   

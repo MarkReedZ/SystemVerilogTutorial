@@ -1,6 +1,7 @@
 
 module hello;
-  int q[$] = '{1,2,3,4,5,6,7};
+  //int q[$] = '{1,2,3,4,5,6,7};
+  int q[$] = '{[1:7]};
 
   initial begin
     int a,b;
@@ -18,6 +19,7 @@ module hello;
     $display("q size = %0d ", q.size());
     q.delete();
     $display("q size = %0d ", q.size());
+    if ( q.empty() ) $display("YAY empty");
 
   end
 

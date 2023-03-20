@@ -1,13 +1,12 @@
 
+
 module tb;
-  int q [$] = {1,2,3,4};
+  int q[$] = '{3,2,8,1,5};
 
   initial begin
-    q.push_back(2);
-    $display("%p",q);
-    q.sort();
-    $display("%p",q);
-    //foreach(q[i]) 
-      //$display("%d",q[i]);
+    q.push_back(6); q.sort();
+    foreach (q[i]) begin
+      $display( "%0d", q[i] );
+    end
   end
 endmodule

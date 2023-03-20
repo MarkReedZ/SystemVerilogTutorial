@@ -10,6 +10,10 @@ endclass
 module test;
   string s = "catsanddog";
   string words[$] = '{"cat","cats","and","sand","dog"};
+  int map[string][$];
+
+  map["c"].push_back(words);
+  
 
   // recursive func
   // loop words substr ==

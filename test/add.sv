@@ -17,10 +17,11 @@ module test;
     t = new(4);
     a.n = t;
     t = new(3);
-    a.n.n = t;
+    a.n.n = t;  // 2 4 3  342
+
     b = new(5);
     t = new(6);
-    b.n = t;
+    b.n = t; // 5 6  -  65
     t = new(4);
     //b.n.n = t;
 
@@ -49,9 +50,9 @@ module test;
       c.n = new(1);
    
 
-    $display(root.val); 
-    $display(root.n.val); 
     $display(root.n.n.val); 
+    $display(root.n.val); 
+    $display(root.val); 
     
   end
 endmodule

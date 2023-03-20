@@ -15,6 +15,7 @@ function automatic void print_inorder( node n );
   $display("%d",n.val);
   print_inorder( n.r );
 endfunction
+
 function automatic void print_postorder( node n );
   if (n == null) return;
   print_postorder( n.l );

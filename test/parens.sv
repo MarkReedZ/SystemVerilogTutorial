@@ -1,8 +1,8 @@
 
 
 module test;
-  //string s = "[][())]";
-  string s = "[";
+  string s = "[][()]";
+  //string s = "[";
   string stk[$];
   int ret = 1;
   string map[string];

@@ -3,5 +3,4 @@
 
 xrun -uvm -input shm.tcl -seed 1 detector.sv top.sv
 
-xrun -uvm -input shm.tcl -seed 1 tb.sv top.sv mmio.sv wdf.sv tl.sv
-
+xrun -uvm -input shm.tcl -seed 1 tb.sv top.sv prims.sv srq.sv mmio.sv wdf.sv tl.sv

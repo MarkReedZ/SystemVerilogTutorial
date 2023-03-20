@@ -1,0 +1,4 @@
+
+xrun -uvm +access+r -input shm.tcl  top.sv l2.sv
+#xrun -uvm +access+r -loadpli1 debpli:novas_pli_boot  top.sv l2.sv
+

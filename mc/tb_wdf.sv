@@ -18,7 +18,7 @@ module tb;
     $display("%0t: wr=%d wptr=%d wr_p=%d data=%0x",$time, wr, wptr, wr_p, data);
   end
   always @(posedge clk && rd) begin
-    $display("%0t: rd=%d rptr=%d rd_p=%d data=%0x",$time, rd, rptr, rd_p, dfi_data);
+    $display("%0t: rd=%d rptr=%d rd_p=%d ",$time, rd, rptr, rd_p);
   end
 
   initial begin

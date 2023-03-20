@@ -1,0 +1,5 @@
+rm *.err
+rm xrun.*
+rm *.out
+rm -rf xprof_report_dir
+rm -rf xcelium.d
