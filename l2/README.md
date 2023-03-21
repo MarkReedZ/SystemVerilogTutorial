@@ -6,7 +6,7 @@ Here we have an L2 that handles coherency for a cluster of 8 cores following the
 # Run
 
 ```
-xrun top.sv l2.sv
+xrun tb/top.sv design/l2.sv -incdir tb/
 ```
 
 # ACE Protocol
